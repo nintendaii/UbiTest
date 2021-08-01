@@ -136,50 +136,53 @@ jobs:
 #          name: build-StandaloneWindows64
 #          path: build/StandaloneWindows64
 #
-#  buildAndroid:
-#    needs: testRunner
-#    name: Build for Android 📱
-#    runs-on: ubuntu-latest
-#    strategy:
-#      fail-fast: false
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v2
-#
-#      - name: Create LFS file list
-#        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
-#
-#      - name: Restore LFS cache
-#        uses: actions/cache@v2
-#        id: lfs-cache
-#        with:
-#          path: .git/lfs
-#          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
-#
-#      - name: Git LFS Pull
-#        run: |
-#          git lfs pull
-#          git add .
-#          git reset --hard
-#
-#      - name: Restore Library cache
-#        uses: actions/cache@v2
-#        with:
-#          path: Library
-#          key: Library-build-Android
-#          restore-keys: |
-#            Library-build-
-#            Library-
-#
-#      - uses: webbertakken/unity-builder@v2
-#        with:
-#          targetPlatform: Android
-#
-#      - uses: actions/upload-artifact@v2
-#        with:
-#          name: build-Android
-#          path: build/Android
-#
+ buildAndroid:
+   needs: testRunner
+   name: Build for Android 📱
+   runs-on: ubuntu-latest
+   strategy:
+     fail-fast: false
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v2
+
+     - name: Create LFS file list
+       run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+     - name: Restore LFS cache
+       uses: actions/cache@v2
+       id: lfs-cache
+       with:
+         path: .git/lfs
+         key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+     - name: Git LFS Pull
+       run: |
+         git lfs pull
+         git add .
+         git reset --hard
+         
+      - uses: game-ci/unity-builder@v2
+        with:
+            allowDirtyBuild: true
+     - name: Restore Library cache
+       uses: actions/cache@v2
+       with:
+         path: Library
+         key: Library-build-Android
+         restore-keys: |
+           Library-build-
+           Library-
+
+     - uses: webbertakken/unity-builder@v2
+       with:
+         targetPlatform: Android
+
+     - uses: actions/upload-artifact@v2
+       with:
+         name: build-Android
+         path: build/Android
+
 #
 #  deployPages:
 #    needs: buildWebGL
