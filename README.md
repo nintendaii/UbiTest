@@ -76,5 +76,4 @@ testRunner:
 
 # CI / CD
 
-See all jobs in [workflow](https://github.com/nintendaii/UbiTest/tree/main/.github/workflows) folder. More time is needed to automate all builds,
-sdk keys, player settings etc.
+See all jobs in [workflow](https://github.com/nintendaii/UbiTest/tree/main/.github/workflows) folder. Go to `Jobs fix` workflow in [Actions](https://github.com/nintendaii/UbiTest/actions)  section and select Android/iOS artifact to download build.
