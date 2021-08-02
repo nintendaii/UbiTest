@@ -18,7 +18,7 @@ public class FBController : MonoBehaviour
 
     private void Start()
     {
-        FB.Init(OnInit);
+        //FB.Init(OnInit);
     }
 
     private void OnInit()
