@@ -25,7 +25,7 @@ Visit https://go.gameanalytics.com/game/156251/live-feed to see all the Design e
 
 # Diawi
 
-Link https://i.diawi.com/2ScWJA sent to the Ubisoft team.
+Link https://i.diawi.com/tQjqx4 sent to the Ubisoft team.
 
 # Tests
 
