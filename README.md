@@ -10,9 +10,9 @@ Setting up SDK:
 # Facebook SDK
 Setting up SDK:
 1. Go to `Facebook > Edit Settings` and paste your App ID.
-2. Follow [these steps].(https://developers.facebook.com/docs/unity/getting-started/android)
+2. Follow [these steps.](https://developers.facebook.com/docs/unity/getting-started/android)
 ## Important
-Currently the share screenshot logic is implemented via [NativeShare Pluggin](https://github.com/yasirkula/UnityNativeShare). 
+Currently the screenshot sharing logic is implemented via [NativeShare Pluggin](https://github.com/yasirkula/UnityNativeShare). 
 The reason it works this way is because Facebook [depreciated](https://developers.facebook.com/blog/post/2018/07/31/platform-update-publish-permission/?locale=ru_RU) `publish_actions` permission.
 
 ![image](https://i.ibb.co/ggCkQWQ/Screenshot-2021-08-02-at-11-35-03.png)
