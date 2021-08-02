@@ -10,7 +10,7 @@ Setting up SDK:
 # Facebook SDK
 Setting up SDK:
 1. Go to `Facebook > Edit Settings` and paste your App ID.
-2. Follow [these steps](https://developers.facebook.com/docs/unity/getting-started/android)
+2. Follow [these steps].(https://developers.facebook.com/docs/unity/getting-started/android)
 ## Important
 Currently the share screenshot logic is implemented via [NativeShare Pluggin](https://github.com/yasirkula/UnityNativeShare). 
 The reason it works this way is because Facebook [depreciated](https://developers.facebook.com/blog/post/2018/07/31/platform-update-publish-permission/?locale=ru_RU) `publish_actions` permission.
@@ -21,11 +21,11 @@ More research is needed to implement the sharing functionality via Facebook SDK.
 a plugin or to play around with Facebook API.
 
 # GameAnalytics SDK
-Visit https://go.gameanalytics.com/game/156251/live-feed to see all Design events sended by the app. Invitation sent to Ubisoft team.
+Visit https://go.gameanalytics.com/game/156251/live-feed to see all the Design events sended by the app. Invitation sent to the Ubisoft team.
 
 # Diawi
 
-Link https://i.diawi.com/2ScWJA sent to Ubisoft team.
+Link https://i.diawi.com/2ScWJA sent to the Ubisoft team.
 
 # Tests
 
