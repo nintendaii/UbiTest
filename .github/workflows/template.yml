@@ -162,9 +162,6 @@ jobs:
          git add .
          git reset --hard
          
-      - uses: game-ci/unity-builder@v2
-        with:
-            allowDirtyBuild: true
      - name: Restore Library cache
        uses: actions/cache@v2
        with:
