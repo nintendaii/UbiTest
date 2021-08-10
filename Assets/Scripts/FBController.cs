@@ -16,11 +16,6 @@ public class FBController : MonoBehaviour
         shareScreenshot.onClick.AddListener(ShareScreenShot);
     }
 
-    private void Start()
-    {
-        //FB.Init(OnInit);
-    }
-
     private void OnInit()
     {
         LoginToFB();
@@ -39,7 +34,7 @@ public class FBController : MonoBehaviour
         Debug.Log("Logged to FB");
     }
 
-    public void ShareScreenShot()
+    private void ShareScreenShot()
     {
         StartCoroutine(TakeScreenshotAndShare());
     }
